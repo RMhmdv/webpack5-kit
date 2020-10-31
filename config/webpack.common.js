@@ -1,7 +1,7 @@
-const paths = require('./paths')
+const paths = require("./paths");
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // Where webpack looks to start building the bundle
@@ -47,17 +47,62 @@ module.exports = {
         ],
       },
 
-      //Templates: 
+      //Templates:
       {
         test: /\.hbs$/,
         use: "handlebars-loader",
       },
 
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: "asset/resource" },
-
+      // { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: "asset/resource" },
+      {
+        test: /\.(ico|gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              name: "[path][name].[ext]",
+              limit: 8192,
+              esModule: false,
+            },
+          },
+          "img-loader",
+        ],
+        // type: "asset/resource",
+      },
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: "asset/inline" },
+      // { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: "asset/inline" },
+      {
+        test: /\.woff(2)?(\?[a-z0-9#=&.]+)?$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+              limit: 10000,
+              mimetype: "application/font-woff",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
+      },
+
+      {
+        test: /\.html$/,
+        use: "html-loader",
+      },
     ],
   },
 };
