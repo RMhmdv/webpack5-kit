@@ -17,12 +17,12 @@ module.exports = merge(common, {
     contentBase: paths.build,
     open: true,
     compress: true,
-    hot: true, // For hot reload
+    hot: false, // For hot reload
     port: 1313,
   },
 
   plugins: [
     // Only update what has changed on hot reload
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
   ],
 });
