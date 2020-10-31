@@ -19,8 +19,6 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
-    "@pnotify/core": "^5.1.2",
-    "@pnotify/mobile": "^5.1.2",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
@@ -30,7 +28,6 @@
     "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^4.5.0",
-    "lodash.debounce": "^4.0.8",
     "mini-css-extract-plugin": "^1.2.1",
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
@@ -46,11 +43,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Salimyaro/webpack5-kit.git"
+    "url": "git+https://github.com/ВАШНИКНАГИТХАБЕ/НАЗВАНИЕВАШЕГОРЕПОЗИТОРИЯ.git"
   },
-  "homepage": "https://github.com/Salimyaro/webpack5-kit",
-  "dependencies": {
-    "material-design-icon-fonts": "^3.0.1",
-    "material-design-icons": "^3.0.1"
-  }
+  "homepage": "https://github.com/ВАШНИКНАГИТХАБЕ/НАЗВАНИЕВАШЕГОРЕПОЗИТОРИЯ",
+  "dependencies": {}
 }
