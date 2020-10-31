@@ -7,6 +7,7 @@
 эти:
 "homepage": "https://github.com/ВАШНИКНАГИТХАБЕ/НАЗВАНИЕВАШЕГОРЕПОЗИТОРИЯ",
 "url": "git+https://github.com/ВАШНИКНАГИТХАБЕ/НАЗВАНИЕВАШЕГОРЕПОЗИТОРИЯ.git"
+
 на ваш репозторий в таком виде:
 "homepage": "https://github.com/salimov-y/webpack5-starter-kit",
 "url": "git+https://github.com/salimov-y/webpack5-starter-kit.git"
