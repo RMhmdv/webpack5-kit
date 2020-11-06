@@ -14,4 +14,4 @@
 
 3. уже содержит:
 	деплой на hg-pages,
-	hot reload
+	async babel fix
